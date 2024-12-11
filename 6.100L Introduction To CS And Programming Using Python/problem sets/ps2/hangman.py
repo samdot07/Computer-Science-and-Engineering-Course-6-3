@@ -130,18 +130,6 @@ def with_help_func(secret_word, available_letters):
       new = random.randint(0, len(choose_from) - 1)
       revealed_letter = choose_from[new]
       return revealed_letter
-    
-# def total_score(secret_word, guess_num):
-#   '''
-#   * secret_word: string, the lowercase word the user is guessing.
-#   * guess_num: int, number of guesses left.
-  
-#   Returns: int, tot_score which repsresent the user's total score 
-#     if the word is guessed.
-#   '''
-#   # Calculate the score by considering the number of guesses left,
-#   # the number of unique letters in the secret word,
-#   # and the total length of the secret word.
 
 # -----------------------------------
 # THE GAME
@@ -190,6 +178,11 @@ def hangman(secret_word, with_help=True):
   # The user starts with 10 guesses.
   # Display the length of the secret word.
   # Display the remaining guesses and avalable letters.
+  
+  # Calculate the score by considering the number of guesses left,
+  # the number of unique letters in the secret word,
+  # and the total length of the secret word.
+  
   # Check if
   # the help option is enabled, reveal a letter at the cost of 3 guesses, update letters_guessed.
   # not enough guesses for help, print a warning message.
@@ -198,7 +191,6 @@ def hangman(secret_word, with_help=True):
   # Update the guessed letters with the current guess. If
   # the guessed letter is in the secret word, display progress.
   # the guess is incorrect, reduce guesses and give feedback.
-  
   letters_guessed = []
   vowels = 'aeiou'
   guess_num = 10
