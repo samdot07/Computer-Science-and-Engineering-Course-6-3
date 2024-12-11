@@ -6,7 +6,7 @@ import string
 # -----------------------------------
 
 # Uncomment and change the path to where words.txt is
-# WORDLIST_FILENAME = '/Users/MIT/6.100L | Introduction To CS And Programming Using Python/problem sets/ps2/mit6_100l_f22_ps2_code/words.txt'
+# WORDLIST_FILENAME = '/Users/username/6.100L Introduction To CS And Programming Using Python/ps2/words.txt'
 
 def load_words():
     """
@@ -131,20 +131,17 @@ def with_help_func(secret_word, available_letters):
       revealed_letter = choose_from[new]
       return revealed_letter
     
-def total_score(secret_word, guess_num):
-  '''
-  * secret_word: string, the lowercase word the user is guessing.
-  * guess_num: int, number of guesses left.
+# def total_score(secret_word, guess_num):
+#   '''
+#   * secret_word: string, the lowercase word the user is guessing.
+#   * guess_num: int, number of guesses left.
   
-  Returns: int, tot_score which repsresent the user's total score 
-    if the word is guessed.
-  '''
-  # Calculate the score by considering the number of guesses left,
-  # the number of unique letters in the secret word,
-  # and the total length of the secret word.
-  
-  score = (guess_num + 4 * len(set(secret_word)) + (3*len(secret_word)))
-  return score
+#   Returns: int, tot_score which repsresent the user's total score 
+#     if the word is guessed.
+#   '''
+#   # Calculate the score by considering the number of guesses left,
+#   # the number of unique letters in the secret word,
+#   # and the total length of the secret word.
 
 # -----------------------------------
 # THE GAME
@@ -205,6 +202,8 @@ def hangman(secret_word, with_help=True):
   letters_guessed = []
   vowels = 'aeiou'
   guess_num = 10
+  
+  total_score = lambda secret_word, guess_num: (guess_num + 4 * len(set(secret_word)) + (3*len(secret_word)))
 
   print('Welcome to Hangman!\n'
         f'I am thinking of a word that is {len(secret_word)} letters long.'
