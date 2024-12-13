@@ -9,12 +9,15 @@ import string
 # WORDLIST_FILENAME = '/Users/username/6.100L Introduction To CS And Programming Using Python/ps2/words.txt'
 
 def load_words():
-    """
-    returns: list, a list of valid words. Words are strings of lowercase letters.
-
+    '''
+    #### Returns:
+    list, a list of valid words. Words are strings of lowercase letters.
+    
+    ---
+    #### Note:
     Depending on the size of the word list, this function may
     take a while to finish.
-    """
+    '''
     print("Loading word list from file...")
     # inFile: file
     inFile = open(WORDLIST_FILENAME, 'r')
@@ -26,12 +29,13 @@ def load_words():
     return wordlist
 
 def choose_word(wordlist):
-    """
-    wordlist (list): list of words (strings)
-
-    returns: a word from wordlist at random
-    """
-    return random.choice(wordlist)
+  '''
+  - wordlist (list): list of words (strings)
+  ---
+  #### Returns: 
+    word from wordlist at random
+  '''
+  return random.choice(wordlist)
 
 # -----------------------------------
 # END OF HELPER CODE
@@ -47,12 +51,13 @@ wordlist = load_words()
 
 def has_player_won(secret_word, letters_guessed):
   '''
-  * secret_word: string, the lowercase word the user is guessing.
-  * letters_guessed: list (of lowercase letters), the letters that have been
+  - secret_word: string, the lowercase word the user is guessing.
+  - letters_guessed: list (of lowercase letters), the letters that have been
     guessed so far.
-    
-  Returns: Boolean, True if all the letters of secret_word are in letters_guessed,
-  False otherwise.
+  ---
+  #### Returns: 
+    boolean, True if all the letters of secret_word are in letters_guessed,
+    False otherwise.
   '''
   # Check if 
   # any letters in secret_word is not guessed, return False.
@@ -67,12 +72,13 @@ def has_player_won(secret_word, letters_guessed):
 
 def get_word_progress(secret_word, letters_guessed):
   '''
-  * secret_word: string, the lowercase word the user is guessing.
-  * letters_guessed: list (of lowercase letters), 
+  - secret_word: string, the lowercase word the user is guessing.
+  - letters_guessed: list (of lowercase letters), 
     the letters that have been guessed so far.
-
-  Returns: string, comprised of letters and asterisks (*) that represents
-  which letters in secret_word have not been guessed so far.
+  ---
+  #### Returns: 
+    string, comprised of letters and asterisks (*) that represents
+    which letters in secret_word have not been guessed so far.
   '''
   # If the current letter has been guessed add it to the empty string.
   # Otherwise, add '*' to represent the ungessed letter.
@@ -90,10 +96,11 @@ def get_word_progress(secret_word, letters_guessed):
     
 def get_available_letters(letters_guessed):
   '''
-  * letters_guessed: list (of lowercase letters), the letters that have been
+  - letters_guessed: list (of lowercase letters), the letters that have been
     guessed so far.
-
-  Returns: string, comprised of letters that represents which
+  ---
+  #### Returns: 
+    string, comprised of letters that represents which
     letters have not yet been guessed. The letters should be returned in
     alphabetical order.
   '''
@@ -111,11 +118,12 @@ def get_available_letters(letters_guessed):
 
 def with_help_func(secret_word, available_letters):
   '''
-  * secret_word: string, the lowercase word the user is guessing.
-  * available_letters: string, comprised of letters that represents which
+  - secret_word: string, the lowercase word the user is guessing.
+  - available_letters: string, comprised of letters that represents which
     letters have not yet been guessed.
-
-  Returns: string, revealed_letter which represents the 
+  ---
+  #### Returns: 
+    string, revealed_letter which represents the 
     letter that has been revealed.
   '''
   # Chek if
@@ -140,37 +148,35 @@ def with_help_func(secret_word, available_letters):
 
 def hangman(secret_word, with_help=True):
   '''
-  * secret_word: string, the secret word to guess.
-  * with_help: boolean, this enables help functionality if true.
-
-  Starts up an interactive game of Hangman.
-
-  * At the start of the game, let the user know how many
+  - secret_word: string, the secret word to guess.
+  - with_help: boolean, this enables help functionality if true.
+  ---
+  ### Starts up an interactive game of Hangman
+  - At the start of the game, let the user know how many
     letters the secret_word contains and how many guesses they start with.
 
-  * The user should start with 10 guesses.
+  - The user should start with 10 guesses.
 
-  * Before each round, you should display to the user how many guesses
+  - Before each round, you should display to the user how many guesses
     they have left and the letters that the user has not yet guessed.
 
-  * Ask the user to supply one guess per round. Remember to make
+  - Ask the user to supply one guess per round. Remember to make
     sure that the user puts in a single letter (or help character '!'
     for with_help functionality)
 
-  * If the user inputs an incorrect consonant, then the user loses ONE guess,
+  - If the user inputs an incorrect consonant, then the user loses ONE guess,
     while if the user inputs an incorrect vowel (a, e, i, o, u),
     then the user loses TWO guesses.
 
-  * The user should receive feedback immediately after each guess
+  - The user should receive feedback immediately after each guess
     about whether their guess appears in the computer's word.
 
-  * After each guess, you should display to the user the
+  - After each guess, you should display to the user the
     partially guessed word so far.
 
-  -----------------------------------
-  with_help functionality
-  -----------------------------------
-  * If the guess is the symbol !, you should reveal to the user one of the
+  ---
+  ### with_help functionality
+  - If the guess is the symbol !, you should reveal to the user one of the
     letters missing from the word at the cost of 3 guesses. If the user does
     not have 3 guesses remaining, print a warning message. Otherwise, add
     this letter to their guessed word and continue playing normally.
@@ -266,7 +272,6 @@ def hangman(secret_word, with_help=True):
 
 if __name__ == "__main__":
     # To test the game.
-
     secret_word = choose_word(wordlist)
     with_help = False
     hangman(secret_word, with_help)
