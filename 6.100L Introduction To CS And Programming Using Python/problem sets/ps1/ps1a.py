@@ -19,6 +19,7 @@ months = 0
 month_salary = year_salary / 12
 down_payment = cost_of_dream_home * down_payment_percentage
 
+# Loop until the total amount saved is greater than or equal to the down payment
 while amount_saved < down_payment:
     months += 1
     amount_saved += amount_saved * (r/12)

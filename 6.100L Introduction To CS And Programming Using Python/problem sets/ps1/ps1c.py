@@ -21,15 +21,20 @@ num_guess = 0
 # the estimated savings and the down payment is within epsilon
 # Calculate the amount saved over 'months'
 guess = (low + high) / 2.0
+
+# Loop until the absolute difference between the estimated payment and 
+# the actual cost is within epsilon tolerance
 while abs(down_payment*guess - cost_of_the_house) <= epsilon:
     months += 1
     amount_saved = initial_deposit * (1 + (guess/12)**(months))
     if amount_saved < down_payment:  
         low = guess
+    
     else:
         high = guess
     guess = (low + high) / 2.0
     num_guess += 1
+
 print(num_guess)
 print(guess)
 

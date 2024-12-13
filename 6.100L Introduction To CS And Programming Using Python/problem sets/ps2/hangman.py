@@ -58,6 +58,7 @@ def has_player_won(secret_word, letters_guessed):
   # any letters in secret_word is not guessed, return False.
   # all letters in secret_word are guessed, return True.
   
+  # Loop through each character in secret_word
   for c in secret_word:
     if c not in letters_guessed:
       return False
@@ -76,8 +77,9 @@ def get_word_progress(secret_word, letters_guessed):
   # If the current letter has been guessed add it to the empty string.
   # Otherwise, add '*' to represent the ungessed letter.
   # Return the final string.
-  
   guess = ''
+  
+  # Loop through each character in secret_word
   for c in secret_word:
     if c in letters_guessed:
       guess += c
@@ -98,9 +100,9 @@ def get_available_letters(letters_guessed):
   # Iterate through each letter in the alphabet [string.ascii_lowercase] and check if
   # the letter has not been guessed, add it to the list.
   # Return the string of available letters not guessed yet.
-  
   available_letters = []
 
+  # Loop through all lowercase letters in the alphabet
   for c in string.ascii_lowercase:
     if c not in letters_guessed:
       available_letters.append(c)
@@ -120,8 +122,9 @@ def with_help_func(secret_word, available_letters):
   # the letter is not in available_letters, it means it hasn't been guessed yet, append it to the list.
   # there are any letters in the choose_from list, randomly pick one to reveal.
   # Return the revealed letter.
-  
   choose_from = []
+  
+  # Loop through each character in secret_word
   for c in secret_word:
     if c not in available_letters:
       choose_from.append(c)
@@ -201,6 +204,7 @@ def hangman(secret_word, with_help=True):
         f'I am thinking of a word that is {len(secret_word)} letters long.'
       )
   
+  # Loop until the player has guesses left
   while guess_num > 0:
     if has_player_won(secret_word, letters_guessed):
       print('----------------\n'
