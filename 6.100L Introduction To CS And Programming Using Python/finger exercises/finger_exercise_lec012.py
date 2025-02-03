@@ -1,11 +1,10 @@
 # Implement the function that meets the specifications below:
 def count_sqrts(nums_list):
     '''
-    - nums_list: a list
+    - nums_list: a list.
     ---
     #### Returns:
         How many elements in nums_list are exact squares of elements in the same list, including itself.
-        
     ---
     #### Note:
     Assumes that nums_list only contains positive numbers and that there are no duplicates.

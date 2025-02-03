@@ -1,9 +1,6 @@
 #########################################
-############### LECTURE ##########################
-#########################################
-
-############## YOU TRY IT ###############
-
+########### YOU TRY IT ##################
+##########################################
 # Write a program that: 
 # * Asks the user for a verb.
 # * Prints "I can _ better than you" where you replace _ with the verb.
@@ -35,7 +32,9 @@ y = int(input("Enter a different number for y: "))
 
 if x == y:
     print(x,"is the same as",y)
+
 print("These are equal!")
+
 # fix it!
 x = int(input("Enter a number for x: "))
 y = int(input("Enter a different number for y: "))

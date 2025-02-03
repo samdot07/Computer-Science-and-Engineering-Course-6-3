@@ -1,8 +1,10 @@
-############### YOU TRY IT #####################
+#########################################
+########### YOU TRY IT ##################
+#########################################
 # Write a function that meets these specifications:
 def char_counts(s):
     ''' 
-        - s is a string of lowercase chars.
+    - s is a string of lowercase chars.
     ---
     #### Returns: 
         tuple, where the first value is the number of 
@@ -12,6 +14,7 @@ def char_counts(s):
     letters = 'aeiou'
     (con, vow) = (0, 0)
     
+    # Iterate through each character in the string
     for c in s:
         if c not in letters:
             con += 1
@@ -24,11 +27,11 @@ def char_counts(s):
 print(char_counts("abcd"))  # prints (1,3)
 print(char_counts("zcght"))  # prints (0,5)
 
-##################################################
+#########################################
 
 def sum_and_prod(L):
     ''' 
-        - L is a list of numbers.
+    - L is a list of numbers.
     ---
     #### Return: 
         tuple, where the first value is the sum of all elements 
@@ -37,6 +40,7 @@ def sum_and_prod(L):
     '''
     (sum, prod) = (0,1)
     
+    # Iterate through each element in the list
     for i in L:
         sum += i
         prod *= i
@@ -45,27 +49,26 @@ def sum_and_prod(L):
 
 print(sum_and_prod([4,6,2,5]))   # prints (17, 240)
 
-#############################################
-################## AT HOME ####################
-#############################################
+#########################################
+################ AT HOME ################
+#########################################
 def max_of_both(n, f1, f2):
     ''' 
-        - n is an int.
-        - f1 and f2 are functions that take in an int and return a float.
-        --- 
-        #### Returns: 
-            The maximum value of all these results.
-            
-        ---
-        #### Note:
-        Applies f1 and f2 on all numbers between 0 and n (inclusive).
+    - n is an int.
+    - f1 and f2 are functions that take in an int and return a float.
+    --- 
+    #### Returns: 
+        The maximum value of all these results.    
+    ---
+    #### Note:
+    Applies f1 and f2 on all numbers between 0 and n (inclusive).
     '''
     return max(n, f1(n), f2(n)) 
 
 print(max_of_both(2, lambda x:x-1, lambda x:x+1))  # prints 3
 print(max_of_both(10, lambda x:x*2, lambda x:x/2))  # prints 20
 
-##################################################
+#########################################
 
 def sublist_sum(L):
     ''' 
@@ -76,6 +79,7 @@ def sublist_sum(L):
     '''
     tot = 0
     
+    # Iterate through each sublist in the list
     for e in L:
         tot += sum(e)
     

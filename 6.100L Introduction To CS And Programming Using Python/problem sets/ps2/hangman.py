@@ -63,7 +63,7 @@ def has_player_won(secret_word, letters_guessed):
   # any letters in secret_word is not guessed, return False.
   # all letters in secret_word are guessed, return True.
   
-  # Loop through each character in secret_word
+  # Iterate through each character in secret_word
   for c in secret_word:
     if c not in letters_guessed:
       return False
@@ -85,10 +85,11 @@ def get_word_progress(secret_word, letters_guessed):
   # Return the final string.
   guess = ''
   
-  # Loop through each character in secret_word
+  # Iterate through each character in secret_word
   for c in secret_word:
     if c in letters_guessed:
       guess += c
+    
     else:
       guess += '*'
   
@@ -109,7 +110,7 @@ def get_available_letters(letters_guessed):
   # Return the string of available letters not guessed yet.
   available_letters = []
 
-  # Loop through all lowercase letters in the alphabet
+  # Iterate through all lowercase letters in the alphabet
   for c in string.ascii_lowercase:
     if c not in letters_guessed:
       available_letters.append(c)
@@ -132,7 +133,7 @@ def with_help_func(secret_word, available_letters):
   # Return the revealed letter.
   choose_from = []
   
-  # Loop through each character in secret_word
+  # Iterate through each character in secret_word
   for c in secret_word:
     if c not in available_letters:
       choose_from.append(c)

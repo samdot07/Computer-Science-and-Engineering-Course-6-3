@@ -14,8 +14,10 @@ guess = (high+low) / 2
 while guess != N:
     if N > guess:
         low = guess
+    
     else:
         high = guess
+    
     guess = (high+low) / 2
     count += 1
 
