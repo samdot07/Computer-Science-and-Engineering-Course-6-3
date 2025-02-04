@@ -14,7 +14,6 @@ print(f"I can {verb} better than you")
 print(5*(' '+verb))
 
 #########################################
-
 # Write a program that:
 # * Saves a secret number. 
 # * Asks the user for a number guess.
@@ -25,7 +24,6 @@ guess = int(input('guess the number: '))
 print(secret == guess)
 
 #########################################
-
 # Buggy
 x = int(input("Enter a number for x: "))
 y = int(input("Enter a different number for y: "))
@@ -44,7 +42,6 @@ if x == y:
     print("These are equal!")
 
 #########################################
-
 # Write a program that:
 # * Saves a secret number. 
 # * Asks the user for a number guess.

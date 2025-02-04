@@ -15,7 +15,6 @@ test = ["ab", "c", "defgh"]
 print(total_len_recur(test)) # should print 8
 
 #########################################
-
 # Write a recursive function according to the specs below
 def in_list_of_lists(L, e):
     '''
@@ -59,7 +58,6 @@ print(score_count(6, d))  # prints 20
 print(score_count(13, d))  # prints 1431
 
 #########################################
-
 # Q2. 
 def in_list_of_lists_mod(L, e):
     '''
@@ -80,6 +78,7 @@ def in_list_of_lists_mod(L, e):
     # Recursion: check if the element is in the first part, otherwise check the rest
     if type(L[0])!=list and e==L[0] or type(L[0])==list and e in L[0]:
         return True
+    
     return in_list_of_lists_mod(L[1:], e)
 
 test = [[1,2],3,4,5,6,7]
@@ -90,7 +89,6 @@ test = [[1,2],[3,4,5],6,7]
 print(in_list_of_lists_mod(test, 10))  # prints False
 
 #########################################
-
 # Q3. 
 def my_deepcopy(L):
     ''' 
@@ -106,6 +104,7 @@ def my_deepcopy(L):
     # Recursion: if the element is a list, deepcopy it, otherwise just copy it
     if not isinstance(L[0], list):
         return [L[0]] + my_deepcopy(L[1:])
+    
     return [my_deepcopy(L[0])] + my_deepcopy(L[1:])
 
 myL = ["abc", ['d'], ['e', ['f', 'g']]]
@@ -117,7 +116,6 @@ print(myL)      # should be ['abc', ['d'], ['e', [1, 'g']]]
 print(my_newL)  # should be ['abc', ['d'], ['e', ['f', 'g']]]
 
 #########################################
-
 # Q4. Here are 3 recursive functions that are incorrectly implemented.
 # Debug them to have them do what the specs say.
 def f(L):

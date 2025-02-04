@@ -21,7 +21,6 @@ while where == 'right':
 print('you got out')
 
 #########################################
-
 # Fix this code to use variables start and end in the 
 # range, to get the total sum between and including those values. 
 # mysum = 0
@@ -56,7 +55,6 @@ for n in range(1,x+1):
         print(n)
 
 #########################################
-
 # Practice 2:
 # Declare a variable n that stores an int. Print the sum of all digits 
 # in n. Hint: you can get a digit at a time looking at the remainder 

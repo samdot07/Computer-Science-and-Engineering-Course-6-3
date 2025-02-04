@@ -16,7 +16,6 @@ print(div_by(10,3))     # print False
 print(div_by(195,13))   # returns True
 
 #########################################
-
 # Write code that satisfies the following specification:
 # Hint, use paper and pen for a strategy before coding!
 def is_palindrome(s):
@@ -53,7 +52,6 @@ print(keep_consonants("aaa"))  # prints an empty string
 print(keep_consonants("babas"))  # prints bbs
 
 #########################################
-
 # 2. Write code that satisfies the following specs:
 def first_to_last_diff(s, c):
     ''' 

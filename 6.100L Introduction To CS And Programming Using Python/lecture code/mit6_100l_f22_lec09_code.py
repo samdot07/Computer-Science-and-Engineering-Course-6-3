@@ -28,7 +28,6 @@ print(char_counts("abcd"))  # prints (1,3)
 print(char_counts("zcght"))  # prints (0,5)
 
 #########################################
-
 def sum_and_prod(L):
     ''' 
     - L is a list of numbers.
@@ -69,7 +68,6 @@ print(max_of_both(2, lambda x:x-1, lambda x:x+1))  # prints 3
 print(max_of_both(10, lambda x:x*2, lambda x:x/2))  # prints 20
 
 #########################################
-
 def sublist_sum(L):
     ''' 
     - L is a list whose elements are lists with int elements.

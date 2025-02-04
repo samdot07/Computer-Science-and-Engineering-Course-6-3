@@ -26,7 +26,6 @@ print(is_triangular(6))  # print True
 print(is_triangular(1))  # print True
 
 #########################################
-
 def bisection_root(x):
     epsilon = 0.01
     low = 0
@@ -70,7 +69,6 @@ def count_nums_with_sqrt_close_to(n, epsilon):
 print(count_nums_with_sqrt_close_to(10, 0.1))
 
 #########################################
-
 def apply(criteria,n):
     ''' 
     - criteria is a function that takes in a number and returns a Boolean.
@@ -96,7 +94,6 @@ how_many = apply(is_even,10)
 print(how_many)
 
 #########################################
-
 def max_of_both(n, f1, f2):
     ''' 
     - n is an int.
@@ -135,7 +132,6 @@ print(is_palindrome("2222"))   # prints True
 print(is_palindrome("abc"))   # prints False
 
 #########################################
-
 def f_yields_palindrome(n, f):
     ''' 
     - n is a positive int.

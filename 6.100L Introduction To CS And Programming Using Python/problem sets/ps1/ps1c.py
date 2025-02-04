@@ -27,11 +27,13 @@ guess = (low + high) / 2.0
 while abs(down_payment*guess - cost_of_the_house) <= epsilon:
     months += 1
     amount_saved = initial_deposit * (1 + (guess/12)**(months))
+    
     if amount_saved < down_payment:  
         low = guess
     
     else:
         high = guess
+    
     guess = (low + high) / 2.0
     num_guess += 1
 

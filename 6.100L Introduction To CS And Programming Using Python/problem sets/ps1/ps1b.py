@@ -25,6 +25,7 @@ while amount_saved < down_payment:
     months += 1
     amount_saved += amount_saved * (r/12)
     amount_saved += portion_saved * month_salary
+    
     if months % 6 == 0:
         month_salary *= (1 + semi_annual_raise)
 

@@ -21,7 +21,6 @@ def make_ordered_list(n):
 print(make_ordered_list(6))  # prints [0, 1, 2, 3, 4, 5, 6]
 
 #########################################
-
 def remove_elem(L, e):
     ''' 
     - L is a list.
@@ -44,7 +43,6 @@ L = [1,2,2,2]
 print(remove_elem(L, 0))    # prints [1,2,2,2]
 
 #########################################
-
 # Write a function that meets this specification
 def count_words(sen):
     ''' 
@@ -65,7 +63,6 @@ s = "I just took a DNA test turns out I'm 100% splitting strings"
 print(count_words(s))   # prints 12
 
 #########################################
-
 # Write a function that meets this specification
 def sort_words(sen):
     ''' 

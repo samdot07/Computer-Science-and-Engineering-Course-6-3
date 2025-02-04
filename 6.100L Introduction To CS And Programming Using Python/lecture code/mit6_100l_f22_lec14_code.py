@@ -15,7 +15,6 @@ d = {'Ana':'B', 'Matt':'C', 'John':'B', 'Katy':'A'}
 print(find_grades(d, ['Matt', 'Katy'])) # returns ['C', 'A']
 
 #########################################
-
 def find_in_L(Ld, k):
     ''' 
     - L is a list of dicts.
@@ -35,7 +34,6 @@ print(find_in_L([d1, d2, d3], 2))  # returns True
 print(find_in_L([d1, d2, d3], 25))  # returns False
 
 #########################################
-
 def count_matches(d):
     '''
     - d is a dict.
@@ -60,7 +58,6 @@ print(count_matches(d))   # prints 2
 #########################################
 ################ AT HOME ################
 #########################################
-
 def is_inverse(d1, d2):
     ''' 
     - d1 and d2 are dicts.
@@ -97,7 +94,6 @@ d2 = {1:2, 2:1}
 print(is_inverse(d1, d2))  # prints False
 
 #########################################
-
 def add_to_d(d, L):
     ''' 
     - d is a dict.

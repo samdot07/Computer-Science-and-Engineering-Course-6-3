@@ -20,7 +20,7 @@ while abs(ans**4 - x) >= epsilon:
     
 print(ans)
 
-######################################
+#########################################
 # Problem 2 - Functions 
 # Write a Python function to check whether a number falls in a given range. 
 def inrange(x, n):
@@ -28,7 +28,7 @@ def inrange(x, n):
 
 print(inrange(0, 10))
 
-######################################
+#########################################
 # Problem 3 - Functions 
 # Write a Python function to check whether a number is perfect or not.
 # (In number theory, a perfect number is a positive integer that is equal 
@@ -39,7 +39,7 @@ def isperfect(x):
 
 print(isperfect(26))
 
-######################################
+#########################################
 # Problem 4 - Approximation Algorithm (see Lecture 5 slides for similar problem)
 # Write an approximation algorithm to calculate the fourth root of some 
 # number inputted by the user. 

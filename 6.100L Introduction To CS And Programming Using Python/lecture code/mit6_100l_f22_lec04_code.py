@@ -18,7 +18,6 @@ for i in range(5):
 print(even)
 
 #########################################
-
 # Assume you are given a string of lowercase letters in variable s. 
 # Count how many unique letters there are in s. For example, if 
 # s = "abca" Then your code prints 3. 
@@ -33,7 +32,6 @@ for c in s:
 print(len(seen))
 
 #########################################
-
 # Hardcode a number as a secret number. Write a program that 
 # checks through all the numbers between 1 to 10 and prints the 
 # secret value. If it's not found, it doesn't print anything. 
@@ -47,7 +45,6 @@ for i in range(10+1):
         print(i)
 
 #########################################
-
 # Hardcode a number as a secret number. Write a program that 
 # checks through all the numbers between 1 to 10 and prints the 
 # secret value. If it's not found, prints that it didn't find it.   

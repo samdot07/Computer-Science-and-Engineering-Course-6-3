@@ -26,6 +26,7 @@ def load_words():
     # wordlist: list of strings
     wordlist = line.split()
     print(" ", len(wordlist), "words loaded.")
+    
     return wordlist
 
 def choose_word(wordlist):
@@ -141,6 +142,7 @@ def with_help_func(secret_word, available_letters):
   if choose_from:
       new = random.randint(0, len(choose_from) - 1)
       revealed_letter = choose_from[new]
+      
       return revealed_letter
 
 # -----------------------------------
@@ -218,6 +220,7 @@ def hangman(secret_word, with_help=True):
             f'Congratulations, you won! {secret_word}\n'
             f'Your total score for this game is: {total_score(secret_word, guess_num)}'
           )
+      
       return
 
     print('----------------\n'
@@ -269,6 +272,7 @@ def hangman(secret_word, with_help=True):
     print('----------------\n'
           f'Sorry, you ran out of guesses. The word was {secret_word}.'
         )
+    
     return
 
 if __name__ == "__main__":

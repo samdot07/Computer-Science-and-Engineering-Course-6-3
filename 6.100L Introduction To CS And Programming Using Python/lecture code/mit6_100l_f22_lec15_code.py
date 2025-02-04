@@ -29,7 +29,6 @@ def mult(a, b):
 print(mult(5,4))
 
 #########################################
-
 # Q3. Calculate a+b recursively. Assume the only math operation
 # you are allowed to do are adding and subtracting 1
 def add(a, b):
@@ -46,7 +45,6 @@ def add(a, b):
 print(add(3,4))   # prints 7
 
 #########################################
-
 # Q4. Calculate a+b recursively by 1's. Assume the only math operation
 # you are allowed to do are adding and subtracting 1
 def add_by_ones(a, b):

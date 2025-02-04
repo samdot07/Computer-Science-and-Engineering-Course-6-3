@@ -21,7 +21,6 @@ class vehicle(object):
         self.color = c
 
 #########################################
-
 # Question 2:
 # Create 2 vehicle instances using the class we wrote previously. 
 # One red vehicle with 2 wheels, and 1 occupant
@@ -35,7 +34,6 @@ class vehicle(object):
 # print(green_v.color) # prints 'green'
 
 #########################################
-
 # Question 3:
 # Add on to the code from above for class Vehicle.
 # Create another method for the vehicle class named add_n_occupants, 
@@ -56,7 +54,6 @@ print(v1.add_n_occupants(3))   # prints 5
 print(v1.occupant)
 
 #########################################
-
 # Question 4:
 # Add another data attribute to the Vehicle class, called max_occupancy,
 # which is always 5. This attribute is not passed in as a parameter, but 
@@ -101,7 +98,6 @@ print(v1.add_n_occupants(3))   # prints 5
 print(v1.occupant)
 
 #########################################
-
 #Question 5:
 # Modify the Vehicle class __init__ such that if a vehicle is created
 # without specifying a color then the color is set to "black".

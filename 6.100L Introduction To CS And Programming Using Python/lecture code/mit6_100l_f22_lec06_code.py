@@ -23,7 +23,6 @@ while abs(guess**2 - x) >= epsilon:
 print(f'{str(guess)} is close to square root of {str(x)}')
 
 #########################################
-
 # Write code to use bisection search to find the cube 
 # root of positive cubes to within some epsilon
 cube = 27
