@@ -12,7 +12,7 @@ def is_triangular(n):
     '''
     total = 0
     
-    # Iterate over all numbers from 0 to n+1
+    # Loop: iterate over all numbers from 0 to n+1
     for i in range(n+1):
         total += i
         if total == n:
@@ -32,7 +32,7 @@ def bisection_root(x):
     high = x ** 3
     guess = (high+low) / 2
     
-    # Loop until guess is within epsilon
+    # Loop: loop until guess is within epsilon
     while (guess**2 - x) >= epsilon:
         if guess**2 < x:
             low = guess
@@ -57,7 +57,7 @@ def count_nums_with_sqrt_close_to(n, epsilon):
         '''
     count = 0
     
-    # Iterate over all numbers from 0 to n^3
+    # Loop: iterate over all numbers from 0 to n^3
     for i in range(n**3):
         sqrt = bisection_root(i)
         if abs(n - sqrt) < epsilon:
@@ -80,7 +80,7 @@ def apply(criteria,n):
     ''' 
     count = 0
     
-    # Iterate over all numbers from 0 to n+1
+    # Loop: iterate over all numbers from 0 to n+1
     for i in range(n+1):
         if criteria(i):
             count +=1

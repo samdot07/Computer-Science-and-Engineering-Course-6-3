@@ -9,7 +9,7 @@ e = 0.022
 count = 1
 x = e
 
-# Loop until 'x' equals 'e * count'
+# Loop: loop until 'x' equals 'e * count'
 while x == (e*count):
     x += e
     count += 1

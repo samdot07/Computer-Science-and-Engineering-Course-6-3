@@ -72,7 +72,7 @@ def in_list_of_lists_mod(L, e):
         if isinstance(L[0], list):
             return e in L
         
-        # Recursive call for nested lists
+        # Recursion: call for nested lists
         return in_list_of_lists_mod(L[0], e)
     
     # Recursion: check if the element is in the first part, otherwise check the rest
@@ -190,7 +190,7 @@ def h(L, e):
                 return h(L[1:], e)
         
         elif type(L[0]) == list:
-            # Recursively search the sublist
+            # Recursion: search the sublist
             if e in L[0]:
                 return h(L[0], e) + h(L[1:], e)
             

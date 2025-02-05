@@ -14,7 +14,7 @@ def char_counts(s):
     letters = 'aeiou'
     (con, vow) = (0, 0)
     
-    # Iterate through each character in the string
+    # Loop: iterate over each character in the string
     for c in s:
         if c not in letters:
             con += 1
@@ -39,7 +39,7 @@ def sum_and_prod(L):
     '''
     (sum, prod) = (0,1)
     
-    # Iterate through each element in the list
+    # Loop: iterate over each element in the list
     for i in L:
         sum += i
         prod *= i
@@ -77,7 +77,7 @@ def sublist_sum(L):
     '''
     tot = 0
     
-    # Iterate through each sublist in the list
+    # Loop: iterate over each sublist in the list
     for e in L:
         tot += sum(e)
     

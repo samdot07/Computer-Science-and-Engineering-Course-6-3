@@ -10,7 +10,7 @@ def keys_with_value(aDict, target):
     Assume that keys and values in aDict are integers or strings.\n
     If aDict does not contain the value target, returns an empty list.
     '''
-    # Iterates over all (k, v) pairs in the dictionary
+    # Loop: iterate over all (k, v) pairs in the dictionary
     return sorted([k for k, v in aDict.items() if v == target])
 
 # Examples:
@@ -28,7 +28,7 @@ def all_positive(d):
     #### Note:
     Suppose an element in d is a key k mapping to value v (a non-empty list).
     '''
-    # Iterates over all (k, v) pairs in the dictionary
+    # Loop: iterate over all (k, v) pairs in the dictionary
     return [k for k, v in d.items() if sum(v) > 0]
 
 # Examples:

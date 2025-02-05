@@ -10,7 +10,8 @@ low = 0
 high = 100
 
 guess = (high+low) / 2
-# Continue looping until the guess matches the chosen number
+
+# Loop: loop until the guess matches the chosen number
 while guess != N:
     if N > guess:
         low = guess

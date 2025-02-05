@@ -44,7 +44,7 @@ print(common_elements((2,3,4), (3,4,5,6)))
 def remove_list_range(L, min, max):
     L_copy = L[:]
 
-    # Iterate through each element in the list
+    # Loop: iterate over each element in the list
     for e in L_copy:
         if not all(min <= i <= max for i in e):
             L.remove(e)

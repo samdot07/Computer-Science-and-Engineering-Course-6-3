@@ -14,7 +14,7 @@ def dot_product(tA, tB):
     '''
     sum = 0
     
-    # Loop over the range of indices in tA
+    # Loop: iterate over the range of indices in tA
     for i in range(len(tA)):
         sum += tA[i] * tB[i]
     

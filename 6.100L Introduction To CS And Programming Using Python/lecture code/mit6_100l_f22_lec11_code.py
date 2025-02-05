@@ -11,7 +11,7 @@ def remove_all(L, e):
     #### Returns: 
         None.
     '''
-    # Continue looping While 'e' is in the list 'L'
+    # Looop: loop While 'e' is in the list 'L'
     while e in L:
         L.remove(e)
     
@@ -40,7 +40,7 @@ def repeat(L, n):
     '''
     L_copy = L[:]
     
-    # Iterate through each number in range
+    # Loop: iterate over each number in range
     for i in range(n-1):
         L.extend(L_copy)
     

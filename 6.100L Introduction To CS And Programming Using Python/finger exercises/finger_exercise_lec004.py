@@ -6,7 +6,7 @@ N = int(input('Choose a positive int: '))
 guess = 0
 cube_root = guess**(1/3)
 
-# Increment guess until its cube is greater than or equal to N
+# Loop: increment guess until its cube is greater than or equal to N
 while guess**3 < N:
     guess += 1
 

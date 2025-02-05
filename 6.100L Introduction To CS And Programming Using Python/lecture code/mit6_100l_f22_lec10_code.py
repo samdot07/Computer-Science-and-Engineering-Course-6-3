@@ -12,7 +12,7 @@ def make_ordered_list(n):
     '''
     list1 = []
     
-    # Loop through numbers from 0 to n (inclusive)
+    # Loop: iterate over numbers from 0 to n (inclusive)
     for x in range(n+1):
         list1.append(x)
     
@@ -29,7 +29,7 @@ def remove_elem(L, e):
         a new list with elements in the same order as L
         but without any elements equal to e. 
     '''
-    # Loop as long as e is in the list
+    # Loop: loop as long as e is in the list
     while e in L:
         L.remove(e)
     
@@ -86,7 +86,7 @@ def apply_to_each(L, f):
     ---
     Mutate L such that you apply function f to every element in L .
     '''
-    # Loop through each index in the list
+    # Loop: iterate over each index in the list
     for e in range(len(L)):
         L[e] = f(L[e])
     

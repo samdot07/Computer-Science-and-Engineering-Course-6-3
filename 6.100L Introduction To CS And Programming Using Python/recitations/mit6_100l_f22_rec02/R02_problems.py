@@ -28,7 +28,7 @@ print(len(my_string) > 10 or len(my_string) < 5)
 # Count the number of e's in the following string
 my_string = "How many times is the letter e in this string?"
 
-# Iterate through each character in the string
+# Loop: iterate over each character in the string
 for c in my_string:
     count = my_string.count('e')
     

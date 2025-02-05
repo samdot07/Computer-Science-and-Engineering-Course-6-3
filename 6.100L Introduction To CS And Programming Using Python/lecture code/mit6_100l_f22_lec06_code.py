@@ -10,7 +10,7 @@ high = x
 
 guess = (high + low)/2
 
-# Continue refining the guess until the difference between guess squared and x is less than epsilon
+# Loop: refine the guess until the difference between guess squared and x is less than epsilon
 while abs(guess**2 - x) >= epsilon:
     if guess**2 < x:
         low = guess
@@ -33,7 +33,7 @@ guess_num = 0
 
 guess = (high+low) / 2.0
 
-# Continue refining the guess until the difference between guess cubed and cube is less than epsilon
+# Loop: refine the guess until the difference between guess cubed and cube is less than epsilon
 while abs(guess**3 - cube) >= epsilon:
     if guess**3 < cube:
         low = guess

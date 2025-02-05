@@ -13,7 +13,7 @@ def recur_power(base, exp):
     if exp == 0:
         return 1
     
-    # recursively calculate the power by multiplying the base
+    # Recursion: calculate the power by multiplying the base
     # with the result of the function called with the exponent decremented by 1
     return base * recur_power(base, exp-1)
 

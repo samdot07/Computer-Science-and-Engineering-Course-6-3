@@ -3,6 +3,6 @@
 # You can use either a while loop or a for loop.
 N = int(input('Choose a positive number: '))
 
-# Loop through a range of numbers from 0 to N-1
+# Loop: iterate over a range of numbers from 0 to N-1
 for i in range(N):
     print('hello world')

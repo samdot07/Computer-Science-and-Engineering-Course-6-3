@@ -8,7 +8,7 @@ def find_grades(grades, students):
     #### Returns: 
         list containing the grades for students (in the same order).
     '''
-    # Iterate through each key-value pair in the dictionary 'grades'
+    # Loop: iterate over each key-value pair in the dictionary 'grades'
     return [v for k, v in grades.items() if k in students]
 
 d = {'Ana':'B', 'Matt':'C', 'John':'B', 'Katy':'A'}
@@ -23,7 +23,7 @@ def find_in_L(Ld, k):
     #### Returns: 
         True if k is a key in any dicts of L and False otherwise.
     '''
-    # Iterate through each dict pair in the list
+    # Loop: iterate over each dict pair in the list
     return any(k in d for d in Ld)
 
 d1 = {1:2, 3:4, 5:6}
@@ -42,7 +42,7 @@ def count_matches(d):
     '''
     count = 0
     
-    # Iterate through each key-value pair in the dictionary 'd'
+    # Loop: iterate over each key-value pair in the dictionary 'd'
     for k, v in d.items():
         if k == v:
             count += 1
@@ -69,12 +69,12 @@ def is_inverse(d1, d2):
     Assume values of d1 and d2 are unique and immutable.
     '''
     
-    # Iterate through each key-value pair in the dictionary 'd1'
+    # Loop: iterate over each key-value pair in the dictionary 'd1'
     for k1, v1 in d1.items():
         if k1 not in d2.values() or v1 not in d2.keys():
             return False
     
-    # Iterate through each key-value pair in the dictionary 'd2'
+    # Loop: iterate over each key-value pair in the dictionary 'd2'
     for k2, v2 in d2.items():
         if k2 not in d1.values() or v2 not in d1.keys():
             return False
@@ -107,7 +107,7 @@ def add_to_d(d, L):
     If the key is already in d, do nothing to its value.\n
     If the key cannot be added, raise a ValueError. 
     '''
-    # Iterate through each tuple in the list
+    # Loop: iterate over each tuple in the list
     for t in L:
         try:
             if t[0] not in d:

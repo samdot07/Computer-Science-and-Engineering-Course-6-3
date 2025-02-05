@@ -9,7 +9,7 @@ def power_recur(n, p):
     elif p == 1 :
         return n
     
-    # Recursive call: Multiply n by the result of n raised to the power of (p-1)
+    # Recursion: multiply n by the result of n raised to the power of (p-1)
     return n * power_recur(n, p-1)
     
 #########################################
@@ -23,7 +23,7 @@ def mult(a, b):
     elif b == 0:
         return 0
     
-    # Recursive call: Add a to the result of multiplying a by (b-1)
+    # Recursion: add a to the result of multiplying a by (b-1)
     return a + mult(a, b-1)
     
 print(mult(5,4))
@@ -39,7 +39,7 @@ def add(a, b):
     if b == 0:
         return a
     
-    # Recursive call: Add 1 to the result of adding a and (b-1)
+    # Recursion: add 1 to the result of adding a and (b-1)
     return 1 + add(a, b-1)
     
 print(add(3,4))   # prints 7
@@ -58,7 +58,7 @@ def add_by_ones(a, b):
     elif a == 0:
         return b
     
-    # Recursive call: Add 1 to b-1, and then add a-1 to 1
+    # Recursion: add 1 to b-1, and then add a-1 to 1
     return add(1, b-1) + add(a-1, 1)
 
 print(add_by_ones(3,4))   # prints 7

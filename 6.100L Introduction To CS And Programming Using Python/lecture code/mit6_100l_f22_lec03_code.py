@@ -11,7 +11,7 @@
 n = 0
 where = input('go left or right? ')
 
-# While the user chooses 'right', the loop continues
+# Loop: while the user chooses 'right', the loop continues
 while where == 'right':
     n += 1
     if n > 2:
@@ -33,7 +33,7 @@ mysum = 0
 start = 3
 end = 5
 
-# Iterate through numbers in range
+# Loop: iterate over numbers in range
 for i in range(start, end+1):
     mysum += i
 
@@ -49,7 +49,7 @@ print(mysum)
 # For ex. if x = 14, it prints 5 and 10.
 x = 14
 
-# Looping through numbers in range from 1 to x
+# Loop: iterate over numbers in range from 1 to x
 for n in range(1,x+1):
     if n % 5 == 0:
         print(n)
@@ -63,7 +63,7 @@ for n in range(1,x+1):
 n = 1234
 tot = 0
 
-# Continue looping while 'n' > 0
+# Loop: loop while 'n' > 0
 while n > 0:
     tot += n % 10 
     n //= 10

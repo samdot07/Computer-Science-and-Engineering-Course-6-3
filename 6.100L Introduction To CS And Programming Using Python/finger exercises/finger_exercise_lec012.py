@@ -11,7 +11,7 @@ def count_sqrts(nums_list):
     '''
     count = 0
     
-    # Iterate over each number in nums_list
+    # Loop: iterate over each number in nums_list
     for n in nums_list:
         if n**2 in nums_list:
             count += 1

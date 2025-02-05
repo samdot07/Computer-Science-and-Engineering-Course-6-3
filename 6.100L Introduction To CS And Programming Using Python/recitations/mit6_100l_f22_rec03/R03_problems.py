@@ -8,7 +8,7 @@ high = x
 
 ans = (high+low) / 2.0
 
-# Loop until the answer is within the specified error tolerance
+# Loop: loop until the answer is within the specified error tolerance
 while abs(ans**4 - x) >= epsilon:
     if  ans**4 < x:
         low = ans
@@ -53,11 +53,11 @@ ans = 0.0
 increment = 0.001
 num_guesses = 0
 
-# Loop to ensure the user inputs a positive number
+# Loop: ensure the user inputs a positive number
 while x < 0:
     x = float(input('Choose a positive number: '))
 
-# Loop to approximate the fourth root using incremental guesses
+# Loop: approximate the fourth root using incremental guesses
 while abs(ans**4 - x) >= epsilon:
     ans += increment
     num_guesses += 1

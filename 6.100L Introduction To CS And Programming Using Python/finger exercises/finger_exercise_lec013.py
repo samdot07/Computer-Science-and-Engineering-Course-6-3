@@ -15,17 +15,20 @@ def sum_str_lengths(L):
     '''
     tot_len = 0
        
-    # Iterate through the elements of L
+    # Loop: iterate over the elements of L
     for i in L:
         if isinstance(i, str):
             tot_len += len(i)
         
-        # Recursively call the function to handle nested sublists
         elif isinstance(i, list):
-            tot_len += sum_str_lengths(i)
+            # Loop: iterate over the elements of i 
+            for e in i:
+                if type(e) == str:
+                    total += len(e)
+                
+                raise ValueError
             
-        else:
-            raise ValueError(f'Invalid element {i}. Expected string or list.')
+        raise ValueError(f'Invalid element {i}. Expected string or list.')
     
     return tot_len
 

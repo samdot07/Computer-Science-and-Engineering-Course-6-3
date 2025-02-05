@@ -19,6 +19,7 @@ def pairwise_div(Lnum, Ldenom):
     if 0 in Ldenom:
         raise ValueError('Cannot devide by 0')
     
+    # Loop: iterate over the elements in range
     return [Lnum[x] / Ldenom[x] for x in range(len(Lnum))]
         
 # For example:
@@ -58,7 +59,7 @@ def pairwise_div(Lnum, Ldenom):
     
     assert len(Lnum) == len(Ldenom) and Lnum != 0, 'Lists are not of equal length or empty'
     
-    # Iterate through the elements of Lnum and Ldenom
+    # Loop: iterate over the elements of Lnum and Ldenom
     for x in range(len(Lnum)):
         try:
             L.append(Lnum[x] / Ldenom[x])

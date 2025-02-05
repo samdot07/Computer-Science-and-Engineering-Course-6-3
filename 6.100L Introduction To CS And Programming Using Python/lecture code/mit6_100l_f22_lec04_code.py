@@ -51,7 +51,7 @@ for i in range(10+1):
 found = False
 secret = 4
 
-# Iterate through numbers from 1 to 10
+# Loop: iterate over numbers from 1 to 10
 for i in range(10+1):
     if i == secret:
         found = True
@@ -72,7 +72,7 @@ text1 = "abc"
 text2 = "cde"
 count = 0
 
-# Iterate through the union of unique characters in both strings
+# Loop: iterate over the union of unique characters in both strings
 for c in set(text1 + text2):
     count += 1
 

@@ -1,11 +1,4 @@
-# 6.100A Fall 2022
 # Problem Set 3
-# Written by: sylvant, muneezap, charz, anabell, nhung, wang19k, asinelni, shahul, jcsands
-
-# Problem Set 3
-# Name:
-# Collaborators:
-
 # Purpose: Check for similarity between two texts by comparing different kinds of word statistics.
 
 import string
@@ -23,7 +16,7 @@ def load_file(filename):
     inFile = open(filename, 'r')
     line = inFile.read().strip()
     
-    # Iterate through each char in the string
+    # Loop: iterate over each char in the string
     for char in string.punctuation:
         line = line.replace(char, "")
     inFile.close()
@@ -56,7 +49,7 @@ def get_frequencies(input_iterable):
     documents we provide will be new lines or space(s) between words 
     (i.e. there are no tabs).
     '''
-    # Iterate through each word in the input
+    # Loop: iterate over each word in the input
     return {w: int(input_iterable.count(w)) for w in input_iterable}
 
 ### Problem 2: Letter Frequencies ###
@@ -93,7 +86,7 @@ def calculate_similarity_score(freq_dict1, freq_dict2):
     Return 1-(DIFF/ALL) rounded to 2 decimal places.
     #### The keys of dict1 and dict2 are all lowercase, you will NOT need to worry about case sensitivity.
     '''
-    # Iterate through each key in freq_dict1 and freq_dict2 combined
+    # Loop: iterate over each key in freq_dict1 and freq_dict2 combined
     diff_tot = sum(abs(freq_dict1.get(k, 0) - freq_dict2.get(k, 0)) 
                    for k in (freq_dict1 | freq_dict2).keys()
                   )
@@ -128,7 +121,7 @@ def get_most_frequent_words(freq_dict1, freq_dict2):
     return an alphabetically ordered list of all these words.
     #### The keys of dict1 and dict2 are all lowercase, you will NOT need to worry about case sensitivity.
     '''
-    # Iterate through each [key:value] pair in freq_dict1 and freq_dict2 combined
+    # Loop: iterate over each [key:value] pair in freq_dict1 and freq_dict2 combined
     return [k for k, v in freq_dict1.items() | freq_dict2.items() 
             if v == max(freq_dict2.values()) or v == max(freq_dict1.values())
            ]
@@ -148,7 +141,7 @@ def get_tf(file_path):
     file_list = text_to_list(load_file(file_path))
     freq_dict = get_frequencies(file_list)
     
-    # Iterate through each [key:value] pair in the dict
+    # Loop: iterate over each [key:value] pair in the dict
     return {k : v / len(file_list) for k, v in freq_dict.items()}
 
 def get_idf(file_paths):
@@ -164,13 +157,13 @@ def get_idf(file_paths):
     '''
     doc_count = {}
 
-    # Iterate through each file path in the list 'file_paths'
+    # Loop: iterate over each file path in the list 'file_paths' and
+    # over each word in the set
     for f in file_paths:
-        # Iterate through each word in the set
         for w in set(text_to_list(load_file(f))):
             doc_count[w] = doc_count.get(w, 0) + 1
 
-    # Iterate through each [key:value] pair in doc_dount
+    # Loop: iterate over each [key:value] pair in doc_dount
     return {k : math.log10(len(file_paths) / v) for k, v in doc_count.items()}
 
 def get_tfidf(tf_file_path, idf_file_paths):
@@ -189,10 +182,11 @@ def get_tfidf(tf_file_path, idf_file_paths):
     '''
     tf_dict = get_tf(tf_file_path)
     id_fdict = get_idf(idf_file_paths)
-    # Iterate through each key in the instersection between freq_dict1 and freq_dict2
+    
+    # Loop: iterate over each key in the instersection between freq_dict1 and freq_dict2
     tot_dict = {k : tf_dict.get(k, 0) * id_fdict.get(k, 0) for k in tf_dict.keys() & id_fdict.keys()}
     
-    # Iterate through each [key:value] pair in tot_dict
+    # Loop: iterate over each [key:value] pair in tot_dict
     return sorted([(k, v) for k, v in tot_dict.items()])
 
 if __name__ == "__main__":

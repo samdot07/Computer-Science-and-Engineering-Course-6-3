@@ -41,7 +41,7 @@ def keep_consonants(word):
     '''
     vowels = 'aeiou'
     
-    # Iterate over each character in the word
+    # Loop: iterate over each character in the word
     for i in word:
         if i in vowels:
             return word.strip(i)

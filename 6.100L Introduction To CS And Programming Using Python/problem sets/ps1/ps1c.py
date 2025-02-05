@@ -1,3 +1,4 @@
+# Problem Set 1c
 ##############################################
 ## Get user input for initial_deposit below ##
 ##############################################
@@ -22,7 +23,7 @@ num_guess = 0
 # Calculate the amount saved over 'months'
 guess = (low + high) / 2.0
 
-# Loop until the absolute difference between the estimated payment and 
+# Loop: loop until the absolute difference between the estimated payment and 
 # the actual cost is within epsilon tolerance
 while abs(down_payment*guess - cost_of_the_house) <= epsilon:
     months += 1
