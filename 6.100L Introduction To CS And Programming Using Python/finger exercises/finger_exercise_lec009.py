@@ -4,13 +4,13 @@ def dot_product(tA, tB):
     - tA: a tuple of numbers.
     - tB: a tuple of numbers of the same length as tA.
     ---
-    #### Returns 
+    #### Return:
         tuple, where the:
-        - first element is the length of one of the tuples.
-        - second element is the sum of the pairwise products of tA and tB.
+            first element is the length of one of the tuples.
+            second element is the sum of the pairwise products of tA and tB.
     ---
     #### Note:
-    Assume tA and tB are the same length.
+        Assume tA and tB are the same length.
     '''
     sum = 0
     

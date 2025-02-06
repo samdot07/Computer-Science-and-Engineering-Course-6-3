@@ -3,12 +3,12 @@ def keys_with_value(aDict, target):
     - aDict: a dictionary.
     - target: an integer or string.
     ---
-    #### Returns: 
+    #### Return: 
         Sorted list of the keys in aDict with the value target.
     ---
     #### Note:
-    Assume that keys and values in aDict are integers or strings.\n
-    If aDict does not contain the value target, returns an empty list.
+        Assume that keys and values in aDict are integers or strings.
+        If aDict does not contain the value target, Return an empty list.
     '''
     # Loop: iterate over all (k, v) pairs in the dictionary
     return sorted([k for k, v in aDict.items() if v == target])
@@ -22,7 +22,7 @@ def all_positive(d):
     '''
     - d is a dictionary that maps int:list.
     ---
-    #### Returns: 
+    #### Return: 
         Sorted list of all k whose v elements sums up to a positive value.
     ---
     #### Note:

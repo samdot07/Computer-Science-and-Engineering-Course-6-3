@@ -42,10 +42,19 @@ print(common_elements((2,3,4), (3,4,5,6)))
 # element outside the given range of 12 - 20 (inclusive):
 # [[13, 14, 15, 17]]
 def remove_list_range(L, min, max):
+    '''
+    - L: list of lists.
+    - min: int, minimum value in the valid range.
+    - max: int, minimum value in the valid range.
+    ---
+    #### Return:
+        list, filtered list with elements that only contain values within the range [min, max].
+    '''
     L_copy = L[:]
 
-    # Loop: iterate over each element in the list
+    # Loop: iterate over each element in the copied list
     for e in L_copy:
+        # Loop: iterate over each element in the lists
         if not all(min <= i <= max for i in e):
             L.remove(e)
             

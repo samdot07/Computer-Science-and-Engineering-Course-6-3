@@ -2,7 +2,7 @@ def flatten(L):
     ''' 
     - L: a list 
     ---
-    #### Returns:
+    #### Return:
         a copy of L, which is a flattened version of L 
     '''
     if not L:

@@ -6,7 +6,7 @@ def make_ordered_list(n):
     ''' 
     - n is a positive int.
     ---
-    #### Returns:
+    #### Return:
         a list containing all ints in order from 0 
         to n (inclusive).
     '''
@@ -25,7 +25,7 @@ def remove_elem(L, e):
     ''' 
     - L is a list.
     ---
-    #### Returns:
+    #### Return:
         a new list with elements in the same order as L
         but without any elements equal to e. 
     '''
@@ -48,7 +48,7 @@ def count_words(sen):
     ''' 
     - sen is a string representing a sentence.
     ---
-    #### Returns:
+    #### Return:
         how many words are in sen (i.e. a word is a 
         sequence of characters between spaces). 
     '''
@@ -68,7 +68,7 @@ def sort_words(sen):
     ''' 
     - sen is a string representing a sentence.
     ---
-    #### Returns:
+    #### Return:
         a list containing all the words in sen but
         sorted in alphabetical order. 
     '''

@@ -6,9 +6,9 @@ def is_triangular(n):
     ''' 
     - n is an int > 0.
     ---
-    #### Returns:
+    #### Return:
         True if n is triangular, i.e. equals a continued
-        summation of natural numbers (1+2+3+...+k) .
+        summation of natural numbers (1+2+3+...+k).
     '''
     total = 0
     
@@ -52,9 +52,9 @@ def count_nums_with_sqrt_close_to(n, epsilon):
     - n is an int > 2.
     - epsilon is a positive number < 1.
     ---
-    #### Returns: 
+    #### Return: 
         How many integers have a square root within epsilon of n.
-        '''
+    '''
     count = 0
     
     # Loop: iterate over all numbers from 0 to n^3
@@ -74,7 +74,7 @@ def apply(criteria,n):
     - criteria is a function that takes in a number and returns a Boolean.
     - n is an int.
     ---
-    #### Returns:
+    #### Return:
         How many ints from 0 to n (inclusive) match the criteria 
         (i.e. return True when criteria is applied to them).
     ''' 
@@ -99,11 +99,11 @@ def max_of_both(n, f1, f2):
     - n is an int.
     - f1 and f2 are functions that take in an int and return a float.
     --- 
-    #### Returns: 
+    #### Return: 
         The maximum value of all these results.
     ---
     #### Note:
-    Applies f1 and f2 on all numbers between 0 and n (inclusive).
+        Applies f1 and f2 on all numbers between 0 and n (inclusive).
     '''
     return max(n, f1(n), f2(n))
 
@@ -117,12 +117,12 @@ def is_palindrome(s):
     ''' 
     - s is a string.
     ---
-    #### Returns:
+    #### Return:
         True if s is a palnidrome and False otherwise. 
     ---   
     #### Note:
-    A palindrome is a string that contains the same 
-    sequence of characters forward and backward.
+        A palindrome is a string that contains the same 
+        sequence of characters forward and backward.
     '''
     return s[::] == s[::-1]
 
@@ -136,9 +136,9 @@ def f_yields_palindrome(n, f):
     ''' 
     - n is a positive int.
     - f is a function that takes in an int and returns an int.
-    #### Returns:
-    True if applying f on n returns a number that is a
-    palindrome and False otherwise.  
+    #### Return:
+        True if applying f on n returns a number that is a
+        palindrome and False otherwise.  
     '''
     return is_palindrome(str(f(n)))
 

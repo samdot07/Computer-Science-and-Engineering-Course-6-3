@@ -43,7 +43,7 @@ class vehicle(object):
         '''
         - n: int, increase in number of occupants.
         ---
-        #### Returns:
+        #### Return:
             int, total number of occupants after increase.
         '''
         return self.occupant + n
@@ -72,7 +72,7 @@ class vehicle(object):
     
     ---
     #### Note:
-    max_occupancy: int, always 5. Not passed as parameter.
+        max_occupancy: int, always 5. Not passed as parameter.
     '''
     def __init__(self, w, o, c):
         self.wheel = w
@@ -84,7 +84,7 @@ class vehicle(object):
         '''
         - n: int, increase in number of occupants.
         ---
-        #### Returns:
+        #### Return:
             int, total number of occupants after increase.
         '''
         if self.occupant + n <= self.max_occupancy:
@@ -112,7 +112,7 @@ class vehicle(object):
     
     ---
     #### Note:
-    max_occupancy: int, always 5. Not passed as parameter.
+        max_occupancy: int, always 5. Not passed as parameter.
     '''
     def __init__(self, w, o, c='black'):
         self.wheel = w

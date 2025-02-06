@@ -5,8 +5,8 @@ def find_grades(grades, students):
     ''' 
     - grades is a dict mapping student names (str) to grades (str) students is a list of student names.
     ---
-    #### Returns: 
-        list containing the grades for students (in the same order).
+    #### Return: 
+        list, containing the grades for students (in the same order).
     '''
     # Loop: iterate over each key-value pair in the dictionary 'grades'
     return [v for k, v in grades.items() if k in students]
@@ -20,7 +20,7 @@ def find_in_L(Ld, k):
     - L is a list of dicts.
     - k is an int.
     ---
-    #### Returns: 
+    #### Return: 
         True if k is a key in any dicts of L and False otherwise.
     '''
     # Loop: iterate over each dict pair in the list
@@ -37,7 +37,8 @@ print(find_in_L([d1, d2, d3], 25))  # returns False
 def count_matches(d):
     '''
     - d is a dict.
-    #### Returns: 
+    ---
+    #### Return: 
         how many entries in d have the key equal to its value.
     '''
     count = 0
@@ -62,7 +63,7 @@ def is_inverse(d1, d2):
     ''' 
     - d1 and d2 are dicts.
     ---
-    #### Returns: 
+    #### Return: 
         True if d1's keys are values in d2 and d1's values are keys in d2.
     ---
     #### Note:
@@ -99,13 +100,14 @@ def add_to_d(d, L):
     - d is a dict.
     - L is a list of tuples.
     ---
-    #### Returns:
+    #### Return:
         None.
     ---
     #### Note:
-    Mutates d with new entries whose key is the first element of a tuple in L and the associated value is the second element of a tuple in L.\n
-    If the key is already in d, do nothing to its value.\n
-    If the key cannot be added, raise a ValueError. 
+        Mutates d with new entries whose key is the first element of a tuple in L and the associated 
+        value is the second element of a tuple in L.
+        If the key is already in d, do nothing to its value.
+        If the key cannot be added, raise a ValueError. 
     '''
     # Loop: iterate over each tuple in the list
     for t in L:

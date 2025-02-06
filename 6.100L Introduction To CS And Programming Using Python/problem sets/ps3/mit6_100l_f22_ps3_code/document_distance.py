@@ -9,7 +9,7 @@ def load_file(filename):
     '''
     - filename: string, name of file to read.
     ---
-    #### Returns: 
+    #### Return: 
         string, contains file contents.
     '''
     # print("Loading file %s" % filename)
@@ -29,7 +29,7 @@ def text_to_list(input_text):
     - input_text: string, representation of text from file.
         Assume the string is made of lowercase characters.
     ---
-    #### Returns:
+    #### Return:
         list, representation of input_text, where each word is a different element in the list.
     '''
     return input_text.split(' ')
@@ -39,15 +39,15 @@ def get_frequencies(input_iterable):
     '''
     - input_iterable: a string or a list of strings, all are made of lowercase characters.
     ---
-    #### Returns:
+    #### Return:
         dictionary, that maps string:int where each string
         is a letter or word in input_iterable and the corresponding int
         is the frequency of the letter or word in input_iterable.
     ---
     #### Note: 
-    You can assume that the only kinds of white space in the text 
-    documents we provide will be new lines or space(s) between words 
-    (i.e. there are no tabs).
+        You can assume that the only kinds of white space in the text 
+        documents we provide will be new lines or space(s) between words 
+        (i.e. there are no tabs).
     '''
     # Loop: iterate over each word in the input
     return {w: int(input_iterable.count(w)) for w in input_iterable}
@@ -57,7 +57,7 @@ def get_letter_frequencies(word):
     '''
     - word: word as a string.
     ---
-    #### Returns:
+    #### Return:
         dictionary that maps string:int where each string
         is a letter in word and the corresponding int
         is the frequency of the letter in word.
@@ -70,20 +70,20 @@ def calculate_similarity_score(freq_dict1, freq_dict2):
     - freq_dict1: frequency dictionary of letters of word1 or words of text1.
     - freq_dict2: frequency dictionary of letters of word2 or words of text2.
     ---
-    #### Returns:
+    #### Return:
         float, a number between 0 and 1, inclusive
         representing how similar the words/texts are to each other.
     ---
     #### Note:
-    The difference in words/text frequencies = DIFF sums words from these three scenarios:
-        - If an element occurs in dict1 and dict2 then
-          get the difference in frequencies.
-        - If an element occurs only in dict1 then take the
-          frequency from dict1.
-        - If an element occurs only in dict2 then take the
-          frequency from dict2.
-    The total frequencies = ALL is calculated by summing all frequencies in both dict1 and dict2.\n
-    Return 1-(DIFF/ALL) rounded to 2 decimal places.
+        The difference in words/text frequencies = DIFF sums words from these three scenarios:
+            - If an element occurs in dict1 and dict2 then
+            get the difference in frequencies.
+            - If an element occurs only in dict1 then take the
+            frequency from dict1.
+            - If an element occurs only in dict2 then take the
+            frequency from dict2.
+        The total frequencies = ALL is calculated by summing all frequencies in both dict1 and dict2.\n
+        Return 1-(DIFF/ALL) rounded to 2 decimal places.
     #### The keys of dict1 and dict2 are all lowercase, you will NOT need to worry about case sensitivity.
     '''
     # Loop: iterate over each key in freq_dict1 and freq_dict2 combined
@@ -106,19 +106,18 @@ def get_most_frequent_words(freq_dict1, freq_dict2):
     - freq_dict1: frequency dictionary for one text.
     - freq_dict2: frequency dictionary for another text.
     ---
-    #### Returns:
+    #### Return:
         list of the most frequent word(s) in the input dictionaries.
     ---    
     #### Note: 
-    The most frequent word:
-    - is based on the combined word frequencies across both dictionaries.
-        If a word occurs in both dictionaries, consider the sum the
-        freqencies as the combined word frequency.
-    - need not be in both dictionaries, i.e it can be exclusively in
-        dict1, dict2, or shared by dict1 and dict2.
-    
-    If multiple words are tied (i.e. share the same highest frequency),
-    return an alphabetically ordered list of all these words.
+        The most frequent word:
+        - is based on the combined word frequencies across both dictionaries.
+            If a word occurs in both dictionaries, consider the sum the
+            freqencies as the combined word frequency.
+        - need not be in both dictionaries, i.e it can be exclusively in
+            dict1, dict2, or shared by dict1 and dict2.
+        If multiple words are tied (i.e. share the same highest frequency),
+        return an alphabetically ordered list of all these words.
     #### The keys of dict1 and dict2 are all lowercase, you will NOT need to worry about case sensitivity.
     '''
     # Loop: iterate over each [key:value] pair in freq_dict1 and freq_dict2 combined
@@ -131,12 +130,12 @@ def get_tf(file_path):
     '''
     - file_path: name of file in the form of a string.
     ---
-    #### Returns:
+    #### Return:
         dictionary, mapping each word to its TF.
     ---   
     #### Note:
-    TF is calculatd as TF(i) = (number times word *i* appears in the document) / (total number of words in the document).
-    Think about how we can use get_frequencies from earlier.
+        TF is calculatd as TF(i) = (number times word *i* appears in the document) / (total number of words in the document).
+        Think about how we can use get_frequencies from earlier.
     '''
     file_list = text_to_list(load_file(file_path))
     freq_dict = get_frequencies(file_list)
@@ -147,13 +146,13 @@ def get_tf(file_path):
 def get_idf(file_paths):
     '''
     - file_paths: list of names of files, where each file name is a string.
-    #### Returns:
+    #### Return:
        dictionary, mapping each word to its IDF.
     ---
     #### Note:
-    IDF is calculated as IDF(i) = log_10(total number of documents / number of
-    documents with word *i* in it), where log_10 is log base 10 and can be called
-    with math.log10().
+        IDF is calculated as IDF(i) = log_10(total number of documents / number of
+        documents with word *i* in it), where log_10 is log base 10 and can be called
+        with math.log10().
     '''
     doc_count = {}
 
@@ -172,13 +171,13 @@ def get_tfidf(tf_file_path, idf_file_paths):
     - idf_file_paths: list of names of files, where each file name is a string
         (used to calculate IDF).
     ---   
-    #### Returns:
+    #### Return:
         a sorted list of tuples (in increasing TF-IDF score), where each tuple is
         of the form (word, TF-IDF). In case of words with the same TF-IDF, the
         words should be sorted in increasing alphabetical order.
     ---
     #### Note:
-    TF-IDF(i) = TF(i) * IDF(i).
+        TF-IDF(i) = TF(i) * IDF(i).
     '''
     tf_dict = get_tf(tf_file_path)
     id_fdict = get_idf(idf_file_paths)

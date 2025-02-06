@@ -5,12 +5,12 @@ def pairwise_div(Lnum, Ldenom):
     ''' 
     - Lnum and Ldenom are non-empty lists of equal lengths containing numbers.
     ---
-    #### Returns:
+    #### Return:
         a new list whose elements are the pairwise 
         division of an element in Lnum by an element in Ldenom. 
     ---
     #### Note:
-    Raise a ValueError if Ldenom contains 0. 
+        Raise a ValueError if Ldenom contains 0. 
     '''
     # challenge: write this with list comprehension!
     assert len(Lnum) == len(Ldenom), 'Lists are different lenghts'
@@ -47,13 +47,13 @@ def pairwise_div(Lnum, Ldenom):
     ''' 
     - Lnum and Ldenom are non-empty lists of equal lengths containing numbers.
     ---
-    #### Returns:
+    #### Return:
         a new list whose elements are the pairwise 
         division of an element in Lnum by an element in Ldenom. 
     ---
     #### Note: 
-    Raise a ValueError if L2 contains 0 or if the code can't 
-    perform the division for some reason. 
+        Raise a ValueError if L2 contains 0 or if the code can't 
+        perform the division for some reason. 
     '''
     L= []
     
