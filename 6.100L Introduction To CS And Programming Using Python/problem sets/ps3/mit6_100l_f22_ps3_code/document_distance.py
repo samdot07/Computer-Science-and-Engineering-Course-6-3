@@ -195,14 +195,16 @@ if __name__ == "__main__":
     ###############################################################
 
     # Tests Problem 0: Prep Data
-    test_directory = '/Users/samuelemoio/MIT/6.100L | Introduction To CS And Programming Using Python/problem sets/ps3/mit6_100l_f22_ps3_code/tests/student_tests/'
+    # Uncomment and change the path to where hello_world.txt and hello_friends.txt are
+    # test_directory = '/Users/username/tests/student_tests/'
     hello_world, hello_friend = load_file(test_directory + 'hello_world.txt'), load_file(test_directory + 'hello_friends.txt')
     world, friend = text_to_list(hello_world), text_to_list(hello_friend)
     print(world)      # should print ['hello', 'world', 'hello']
     print(friend)     # should print ['hello', 'friends']
 
     # Tests Problem 1: Get Frequencies
-    test_directory = '/Users/samuelemoio/MIT/6.100L | Introduction To CS And Programming Using Python/problem sets/ps3/mit6_100l_f22_ps3_code/tests/student_tests/'
+    # Uncomment and change the path to where hello_world.txt and hello_friends.txt are
+    # test_directory = '/Users/username/tests/student_tests/'
     hello_world, hello_friend = load_file(test_directory + 'hello_world.txt'), load_file(test_directory + 'hello_friends.txt')
     world, friend = text_to_list(hello_world), text_to_list(hello_friend)
     world_word_freq = get_frequencies(world)
@@ -217,7 +219,8 @@ if __name__ == "__main__":
     print(freq2)      #  should print {'t': 2, 'h': 1, 'a': 1}
 
     # Tests Problem 3: Similarity
-    test_directory = '/Users/samuelemoio/MIT/6.100L | Introduction To CS And Programming Using Python/problem sets/ps3/mit6_100l_f22_ps3_code/tests/student_tests/'
+    # Uncomment and change the path to where hello_world.txt and hello_friends.txt are
+    # test_directory = '/Users/username/tests/student_tests/'
     hello_world, hello_friend = load_file(test_directory + 'hello_world.txt'), load_file(test_directory + 'hello_friends.txt')
     world, friend = text_to_list(hello_world), text_to_list(hello_friend)
     world_word_freq = get_frequencies(world)
@@ -240,11 +243,9 @@ if __name__ == "__main__":
     print(most_frequent)      # should print ["hello", "world"]
 
     ## Tests Problem 5: Find TF-IDF
-    tf_text_file = '/Users/samuelemoio/MIT/6.100L | Introduction To CS And Programming Using Python/problem sets/ps3/mit6_100l_f22_ps3_code/tests/student_tests/hello_world.txt'
-    idf_text_files = [
-                      '/Users/samuelemoio/MIT/6.100L | Introduction To CS And Programming Using Python/problem sets/ps3/mit6_100l_f22_ps3_code/tests/student_tests/hello_world.txt', 
-                      '/Users/samuelemoio/MIT/6.100L | Introduction To CS And Programming Using Python/problem sets/ps3/mit6_100l_f22_ps3_code/tests/student_tests/hello_friends.txt'
-                     ]
+    # Uncomment and change the path to where hello_world.txt and hello_friends.txt are
+    # tf_text_file = '/Users/username/tests/student_tests/hello_world.txt'
+    # idf_text_files = ['/Users/username/tests/student_tests/hello_world.txt', '/Users/username/tests/student_tests/hello_friends.txt']
     tf = get_tf(tf_text_file)
     idf = get_idf(idf_text_files)
     tf_idf = get_tfidf(tf_text_file, idf_text_files)

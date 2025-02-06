@@ -7,7 +7,7 @@ import string
 # -----------------------------------
 
 # Uncomment and change the path to where words.txt is
-# WORDLIST_FILENAME = '/Users/username/6.100L Introduction To CS And Programming Using Python/ps2/words.txt'
+# WORDLIST_FILENAME = '/Users/username/words.txt'
 
 def load_words():
     '''
