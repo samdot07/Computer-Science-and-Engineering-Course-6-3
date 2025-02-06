@@ -90,7 +90,7 @@ def gcd(a, b):
     if b == 0:
         return a
     
-     # Recursion: call the function with (b, a % b) to calculate the GCD
+    # Recursion: call the function with (b, a % b) to calculate the GCD
     return gcd(b, a % b)
 
 # testing   
