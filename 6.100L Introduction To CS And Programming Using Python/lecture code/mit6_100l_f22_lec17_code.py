@@ -43,7 +43,7 @@ class vehicle(object):
         '''
         - n: int, increase in number of occupants.
         ---
-        #### Return:
+        #### return:
             int, total number of occupants after increase.
         '''
         return self.occupant + n
@@ -84,7 +84,7 @@ class vehicle(object):
         '''
         - n: int, increase in number of occupants.
         ---
-        #### Return:
+        #### return:
             int, total number of occupants after increase.
         '''
         if self.occupant + n <= self.max_occupancy:

@@ -5,7 +5,7 @@ def find_grades(grades, students):
     ''' 
     - grades is a dict mapping student names (str) to grades (str) students is a list of student names.
     ---
-    #### Return: 
+    #### return: 
         list, containing the grades for students (in the same order).
     '''
     # Loop: iterate over each key-value pair in the dictionary 'grades'
@@ -20,7 +20,7 @@ def find_in_L(Ld, k):
     - L is a list of dicts.
     - k is an int.
     ---
-    #### Return: 
+    #### return: 
         True if k is a key in any dicts of L and False otherwise.
     '''
     # Loop: iterate over each dict pair in the list
@@ -38,7 +38,7 @@ def count_matches(d):
     '''
     - d is a dict.
     ---
-    #### Return: 
+    #### return: 
         how many entries in d have the key equal to its value.
     '''
     count = 0
@@ -63,7 +63,7 @@ def is_inverse(d1, d2):
     ''' 
     - d1 and d2 are dicts.
     ---
-    #### Return: 
+    #### return: 
         True if d1's keys are values in d2 and d1's values are keys in d2.
     ---
     #### Note:
@@ -100,7 +100,7 @@ def add_to_d(d, L):
     - d is a dict.
     - L is a list of tuples.
     ---
-    #### Return:
+    #### return:
         None.
     ---
     #### Note:

@@ -18,7 +18,7 @@ print(new_list)
 #########################################
 # Problem 2: Write a Function to insert a specified element x in a given list 
 # after every nth element.
-# Return the new list. 
+# return the new list. 
 # Example
 # Original list:
 # [1, 3, 5, 7, 9, 11, 0, 2, 4, 6, 8, 10, 8, 9, 0, 4, 3, 0]
@@ -30,7 +30,7 @@ def insert_element_list1(lst, x, n):
     - x: int, element to insert.
     - n: int, x will be inserted after every nth element.
     ---
-    #### Return: 
+    #### return: 
         new modified list.
     '''
     # Loop: iterate over the list in reverse to avoid affecting indices of unprocessed elements
@@ -58,7 +58,7 @@ def sort_list_of_lists(lst):
     - lst: lst, input list.
     - n: int, index to sort by.
     ---
-    #### Return: 
+    #### return: 
         the sorted list.
     '''
     return sorted(lst, reverse=True)
@@ -82,7 +82,7 @@ def split_list(lst, n):
     '''
     - lst: list, input list.
     - n: int, size of chunks.
-    #### Return: 
+    #### return: 
         new split list.
     '''
     # Loop: iterate over the list from 0 to the length of the list in steps of n

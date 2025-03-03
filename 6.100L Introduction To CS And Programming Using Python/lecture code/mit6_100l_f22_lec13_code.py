@@ -5,7 +5,7 @@ def pairwise_div(Lnum, Ldenom):
     ''' 
     - Lnum and Ldenom are non-empty lists of equal lengths containing numbers.
     ---
-    #### Return:
+    #### return:
         a new list whose elements are the pairwise 
         division of an element in Lnum by an element in Ldenom. 
     ---
@@ -47,7 +47,7 @@ def pairwise_div(Lnum, Ldenom):
     ''' 
     - Lnum and Ldenom are non-empty lists of equal lengths containing numbers.
     ---
-    #### Return:
+    #### return:
         a new list whose elements are the pairwise 
         division of an element in Lnum by an element in Ldenom. 
     ---

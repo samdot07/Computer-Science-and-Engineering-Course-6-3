@@ -8,7 +8,7 @@ def remove_all(L, e):
     - L is a list.
     ---
     Mutates L to remove all elements in L that are equal to e
-    #### Return: 
+    #### return: 
         None.
     '''
     # Looop: loop While 'e' is in the list 'L'

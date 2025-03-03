@@ -3,7 +3,7 @@ def recur_power(base, exp):
     - base: int or float.
     - exp: int >= 0.
     ---
-    #### Return: 
+    #### return: 
         base to the power of exp using recursion.
     ---
     #### Note:

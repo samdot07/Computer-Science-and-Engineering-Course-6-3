@@ -3,7 +3,7 @@ def count_sqrts(nums_list):
     '''
     - nums_list: a list.
     ---
-    #### Return:
+    #### return:
         How many elements in nums_list are exact squares of elements in the same list, including itself.
     ---
     #### Note:

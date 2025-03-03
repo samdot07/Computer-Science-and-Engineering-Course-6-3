@@ -5,7 +5,7 @@ def sum_series(n):
     '''
     - n: int.
     ---
-    #### Return:
+    #### return:
         int, sum of the positive integers of n+(n-2)+(n-4)... 
         (until and not including n-x =< 0).
     '''
@@ -27,7 +27,7 @@ def power(a, b):
     - a: int.
     - b: int.
     ---
-    #### Return:
+    #### return:
         int, value of 'a' to the power 'b'.
     '''
     if b == 0:
@@ -46,7 +46,7 @@ def list_sum(num_List):
     '''
     - num_List: list, list of numbers.
     ---
-    #### Return:
+    #### return:
         int, sum of a list of numbers.
     '''
     if not num_List:
@@ -64,7 +64,7 @@ def harmonic(n):
     '''
     - n: int.
     ---
-    #### Return:
+    #### return:
         int, the nth harmonic number.
     '''
     if n == 1:
@@ -84,7 +84,7 @@ def gcd(a, b):
     - a: int.
     - b: int.
     ---
-    #### Return:
+    #### return:
         int, greatest common divisor (gcd) between 'a' and 'b'.
     '''
     if b == 0:

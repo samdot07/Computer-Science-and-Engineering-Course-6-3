@@ -4,7 +4,7 @@ def sum_str_lengths(L):
         - string elements or 
         - a non-empty sublist of string elements.
     ---
-    #### Return: 
+    #### return: 
         sum of the length of all strings in L and lengths of 
         strings in the sublists of L.
     ---

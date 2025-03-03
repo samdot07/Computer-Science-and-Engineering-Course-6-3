@@ -8,7 +8,7 @@ def new_dict(input_dict):
     '''
     - input_dict: dictionary, taken as input.
     ---
-    #### Return:
+    #### return:
         dictionary, where 5 is added to each value of the original dictionary.
     ---
     #### Note:
@@ -31,7 +31,7 @@ def check_same_values(input_dict):
     '''
     - input_dict: dictionary, taken as input.
     ---
-    #### Return:
+    #### return:
         boolean, True if all values are the same, False otherwise.
     '''
     # Loop: iterate over all values in the dictionary values
@@ -56,7 +56,7 @@ def dict_to_sorted_list(input_dict):
     '''
     - input_dict: dictionary, taken as input.
     ---
-    #### Return:
+    #### return:
         Sorted version of a list where we sort by decreasing values. 
     ---
     #### Note:
@@ -82,7 +82,7 @@ def combine_dicts(input_dicts):
     '''
     - input_dict: list of dictionaries.
     ---
-    #### Return:
+    #### return:
         A single dictionary with all the items combined. 
     '''
     new_dict = {}

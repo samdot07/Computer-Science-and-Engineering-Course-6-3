@@ -47,7 +47,7 @@ def remove_list_range(L, min, max):
     - min: int, minimum value in the valid range.
     - max: int, minimum value in the valid range.
     ---
-    #### Return:
+    #### return:
         list, filtered list with elements that only contain values within the range [min, max].
     '''
     L_copy = L[:]

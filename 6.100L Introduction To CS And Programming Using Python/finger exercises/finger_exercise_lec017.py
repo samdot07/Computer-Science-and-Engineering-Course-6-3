@@ -7,7 +7,7 @@ class Circle():
 
     def get_radius(self):
         '''
-        #### Return: 
+        #### return: 
             radius of self.
         '''
         return self.radius
@@ -23,7 +23,7 @@ class Circle():
     def get_area(self):
         ''' 
         ---
-        #### Return:
+        #### return:
             area of self using pi = 3.14.
         '''
         return 3.14 * (self.radius**2)
@@ -32,7 +32,7 @@ class Circle():
         ''' 
         - c is a Circle object.
         ---
-        #### Return:
+        #### return:
             True if self and c have the same radius value.
         '''
         return self.radius == c.radius
@@ -41,7 +41,7 @@ class Circle():
         ''' 
         - c is a Circle object.
         ---
-        #### Return:
+        #### return:
             self or c, the Circle object with the bigger radius.
         '''
         return self if self.radius > c.radius else c

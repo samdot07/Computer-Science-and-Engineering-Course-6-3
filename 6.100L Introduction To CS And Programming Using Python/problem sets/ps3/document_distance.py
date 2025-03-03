@@ -1,6 +1,5 @@
 # Problem Set 3
 # Purpose: Check for similarity between two texts by comparing different kinds of word statistics.
-
 import string
 import math
 
@@ -9,7 +8,7 @@ def load_file(filename):
     '''
     - filename: string, name of file to read.
     ---
-    #### Return: 
+    #### return: 
         string, contains file contents.
     '''
     # print("Loading file %s" % filename)
@@ -29,7 +28,7 @@ def text_to_list(input_text):
     - input_text: string, representation of text from file.
         Assume the string is made of lowercase characters.
     ---
-    #### Return:
+    #### return:
         list, representation of input_text, where each word is a different element in the list.
     '''
     return input_text.split(' ')
@@ -39,7 +38,7 @@ def get_frequencies(input_iterable):
     '''
     - input_iterable: a string or a list of strings, all are made of lowercase characters.
     ---
-    #### Return:
+    #### return:
         dictionary, that maps string:int where each string
         is a letter or word in input_iterable and the corresponding int
         is the frequency of the letter or word in input_iterable.
@@ -57,7 +56,7 @@ def get_letter_frequencies(word):
     '''
     - word: word as a string.
     ---
-    #### Return:
+    #### return:
         dictionary that maps string:int where each string
         is a letter in word and the corresponding int
         is the frequency of the letter in word.
@@ -70,7 +69,7 @@ def calculate_similarity_score(freq_dict1, freq_dict2):
     - freq_dict1: frequency dictionary of letters of word1 or words of text1.
     - freq_dict2: frequency dictionary of letters of word2 or words of text2.
     ---
-    #### Return:
+    #### return:
         float, a number between 0 and 1, inclusive
         representing how similar the words/texts are to each other.
     ---
@@ -83,7 +82,7 @@ def calculate_similarity_score(freq_dict1, freq_dict2):
             - If an element occurs only in dict2 then take the
             frequency from dict2.
         The total frequencies = ALL is calculated by summing all frequencies in both dict1 and dict2.\n
-        Return 1-(DIFF/ALL) rounded to 2 decimal places.
+        return 1-(DIFF/ALL) rounded to 2 decimal places.
     #### The keys of dict1 and dict2 are all lowercase, you will NOT need to worry about case sensitivity.
     '''
     # Loop: iterate over each key in freq_dict1 and freq_dict2 combined
@@ -106,7 +105,7 @@ def get_most_frequent_words(freq_dict1, freq_dict2):
     - freq_dict1: frequency dictionary for one text.
     - freq_dict2: frequency dictionary for another text.
     ---
-    #### Return:
+    #### return:
         list of the most frequent word(s) in the input dictionaries.
     ---    
     #### Note: 
@@ -130,7 +129,7 @@ def get_tf(file_path):
     '''
     - file_path: name of file in the form of a string.
     ---
-    #### Return:
+    #### return:
         dictionary, mapping each word to its TF.
     ---   
     #### Note:
@@ -146,7 +145,7 @@ def get_tf(file_path):
 def get_idf(file_paths):
     '''
     - file_paths: list of names of files, where each file name is a string.
-    #### Return:
+    #### return:
        dictionary, mapping each word to its IDF.
     ---
     #### Note:
@@ -171,7 +170,7 @@ def get_tfidf(tf_file_path, idf_file_paths):
     - idf_file_paths: list of names of files, where each file name is a string
         (used to calculate IDF).
     ---   
-    #### Return:
+    #### return:
         a sorted list of tuples (in increasing TF-IDF score), where each tuple is
         of the form (word, TF-IDF). In case of words with the same TF-IDF, the
         words should be sorted in increasing alphabetical order.
@@ -196,7 +195,7 @@ if __name__ == "__main__":
 
     # Tests Problem 0: Prep Data
     # Uncomment and change the path to where hello_world.txt and hello_friends.txt are
-    # test_directory = '/Users/username/tests/student_tests/'
+    # test_directory = 'student_tests'
     hello_world, hello_friend = load_file(test_directory + 'hello_world.txt'), load_file(test_directory + 'hello_friends.txt')
     world, friend = text_to_list(hello_world), text_to_list(hello_friend)
     print(world)      # should print ['hello', 'world', 'hello']
@@ -204,7 +203,7 @@ if __name__ == "__main__":
 
     # Tests Problem 1: Get Frequencies
     # Uncomment and change the path to where hello_world.txt and hello_friends.txt are
-    # test_directory = '/Users/username/tests/student_tests/'
+    # test_directory = 'student_tests'
     hello_world, hello_friend = load_file(test_directory + 'hello_world.txt'), load_file(test_directory + 'hello_friends.txt')
     world, friend = text_to_list(hello_world), text_to_list(hello_friend)
     world_word_freq = get_frequencies(world)
@@ -220,7 +219,7 @@ if __name__ == "__main__":
 
     # Tests Problem 3: Similarity
     # Uncomment and change the path to where hello_world.txt and hello_friends.txt are
-    # test_directory = '/Users/username/tests/student_tests/'
+    # test_directory = 'student_tests'
     hello_world, hello_friend = load_file(test_directory + 'hello_world.txt'), load_file(test_directory + 'hello_friends.txt')
     world, friend = text_to_list(hello_world), text_to_list(hello_friend)
     world_word_freq = get_frequencies(world)
@@ -244,8 +243,8 @@ if __name__ == "__main__":
 
     ## Tests Problem 5: Find TF-IDF
     # Uncomment and change the path to where hello_world.txt and hello_friends.txt are
-    # tf_text_file = '/Users/username/tests/student_tests/hello_world.txt'
-    # idf_text_files = ['/Users/username/tests/student_tests/hello_world.txt', '/Users/username/tests/student_tests/hello_friends.txt']
+    # tf_text_file = 'hello_world.txt'
+    # idf_text_files = ['hello_world.txt', 'hello_friends.txt']
     tf = get_tf(tf_text_file)
     idf = get_idf(idf_text_files)
     tf_idf = get_tfidf(tf_text_file, idf_text_files)

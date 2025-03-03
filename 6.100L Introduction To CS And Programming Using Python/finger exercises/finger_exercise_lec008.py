@@ -3,7 +3,7 @@ def same_chars(s1, s2):
     '''
     - s1 and s2 are strings.
     ---
-    #### Return:
+    #### return:
         boolean, True if a character in s1 is also in s2, and vice versa.  
     ---
     #### Note:  

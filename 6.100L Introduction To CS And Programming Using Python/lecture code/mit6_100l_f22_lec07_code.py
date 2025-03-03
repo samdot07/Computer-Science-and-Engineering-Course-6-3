@@ -6,7 +6,7 @@ def div_by(n, d):
     ''' 
     - n and d are ints > 0.
     ---
-    #### Return:
+    #### return:
         True if d divides n evenly and False otherwise.
     '''
     return n % d == 0
@@ -22,7 +22,7 @@ def is_palindrome(s):
     '''
     - s is a string.
     ---
-    #### Return:
+    #### return:
         True if s is a palindrome and False otherwise.
     '''
     return s[::] == s[::-1]
@@ -35,7 +35,7 @@ def keep_consonants(word):
     ''' 
     - word is a string of lowercase letters.
     ---
-    #### Return:
+    #### return:
         string, containing only the consonants of word in 
         the order they appear.
     '''
@@ -58,7 +58,7 @@ def first_to_last_diff(s, c):
     - s is a string.
     - c is single character string.
     ---
-    #### Return:
+    #### return:
         The difference between the index where c first
         occurs and the index where c last occurs.
     ---

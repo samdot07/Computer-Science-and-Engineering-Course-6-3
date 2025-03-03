@@ -7,11 +7,11 @@ import string
 # -----------------------------------
 
 # Uncomment and change the path to where words.txt is
-# WORDLIST_FILENAME = '/Users/username/words.txt'
+# WORDLIST_FILENAME = 'words.txt'
 
 def load_words():
     '''
-    #### Return:
+    #### return:
       list, a list of valid words. Words are strings of lowercase letters.
     ---
     #### Note:
@@ -33,7 +33,7 @@ def choose_word(wordlist):
   '''
   - wordlist (list): list of words (strings).
   ---
-  #### Return: 
+  #### return: 
     word from wordlist at random.
   '''
   return random.choice(wordlist)
@@ -56,7 +56,7 @@ def has_player_won(secret_word, letters_guessed):
   - letters_guessed: list (of lowercase letters), the letters that have been
     guessed so far.
   ---
-  #### Return: 
+  #### return: 
     boolean, True if all the letters of secret_word are in letters_guessed,
     False otherwise.
   '''
@@ -77,7 +77,7 @@ def get_word_progress(secret_word, letters_guessed):
   - letters_guessed: list (of lowercase letters), 
     the letters that have been guessed so far.
   ---
-  #### Return: 
+  #### return: 
     string, comprised of letters and asterisks (*) that represents
     which letters in secret_word have not been guessed so far.
   '''
@@ -101,7 +101,7 @@ def get_available_letters(letters_guessed):
   - letters_guessed: list (of lowercase letters), the letters that have been
     guessed so far.
   ---
-  #### Return: 
+  #### return: 
     string, comprised of letters that represents which
     letters have not yet been guessed. The letters should be returned in
     alphabetical order.
@@ -124,7 +124,7 @@ def with_help_func(secret_word, available_letters):
   - available_letters: string, comprised of letters that represents which
     letters have not yet been guessed.
   ---
-  #### Return: 
+  #### return: 
     string, revealed_letter which represents the 
     letter that has been revealed.
   '''

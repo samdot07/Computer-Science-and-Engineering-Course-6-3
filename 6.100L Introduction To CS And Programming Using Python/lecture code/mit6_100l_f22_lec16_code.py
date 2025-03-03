@@ -20,7 +20,7 @@ def in_list_of_lists(L, e):
     '''
     - L: list, whose elements are lists containing ints.
     ---
-    #### Return: 
+    #### return: 
         True if e is an element within the lists of L and False otherwise.
     '''
     if len(L) == 1:
@@ -65,7 +65,7 @@ def in_list_of_lists_mod(L, e):
         - lists containing ints.
         - ints.
     ---
-    #### Return: 
+    #### return: 
         True if e is an element within L or sublists of L and False otherwise. 
     '''
     if len(L) == 1:
@@ -94,7 +94,7 @@ def my_deepcopy(L):
     ''' 
     - L: list, containing lists or list of lists, etc.
     ---
-    #### Return: 
+    #### return: 
         a new list with the same structure as L that 
         contains copies (recursively) of every sublist.
     '''
@@ -122,7 +122,7 @@ def f(L):
     ''' 
     - L is a non-empty list of lowercase letters.
     ---
-    #### Return:
+    #### return:
     the letter earliest in the alphabet. 
     '''
     if len(L) == 1:
@@ -144,7 +144,7 @@ def g(L, e):
     - L is list of ints.
     - e is an int.
     ---
-    #### Return:
+    #### return:
         a count of how many times e occurrs in L.
     '''
     if len(L) == 0:
@@ -174,7 +174,7 @@ def h(L, e):
     - L is list. 
     - e is an int.
     ---
-    #### Return:
+    #### return:
         a count of how many times e occurrs in L or (recursively) any sublist of L.
     '''
     if len(L) == 0:

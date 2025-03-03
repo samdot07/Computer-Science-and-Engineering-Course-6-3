@@ -4,7 +4,7 @@ def square_list(my_list):
     '''
     - my_list: list, list of numbers.
     ---
-    #### Return:
+    #### return:
         list, list with the squared values of the original elements.
     '''
     # Loop: iterate over each index in the list
@@ -32,7 +32,7 @@ def concatenate_lists(l1, l2, l3):
     - l2: list, second list containing elements to be concatenated.
     - l3: list, third list containing elements to be concatenated.
     ---
-    #### Return:
+    #### return:
         list, new list where each element is the sum of corresponding elements 
             from l1, l2, and l3.
     '''
@@ -65,7 +65,7 @@ def rotate_list(input_list, direction, shift):
     - direction: string, direction which to rotate the list.
     - shift: int, number of elements to shift.
     ---
-    #### Return:
+    #### return:
         list, shiftefd to the right or left direction by a specified amount.
     '''
     shift = shift % len(input_list)

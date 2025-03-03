@@ -6,7 +6,7 @@ def char_counts(s):
     ''' 
     - s is a string of lowercase chars.
     ---
-    #### Return: 
+    #### return: 
         tuple, where the first value is the number of 
         vowels in s and the second value is the number 
         of consonants in s.
@@ -32,7 +32,7 @@ def sum_and_prod(L):
     ''' 
     - L is a list of numbers.
     ---
-    #### Return: 
+    #### return: 
         tuple, where the first value is the sum of all elements 
         in L and the second value is the product of all 
         elements in L.
@@ -56,7 +56,7 @@ def max_of_both(n, f1, f2):
     - n is an int.
     - f1 and f2 are functions that take in an int and return a float.
     --- 
-    #### Return: 
+    #### return: 
         The maximum value of all these results.    
     ---
     #### Note:
@@ -72,7 +72,7 @@ def sublist_sum(L):
     ''' 
     - L is a list whose elements are lists with int elements.
     ---
-    #### Return: 
+    #### return: 
         The sum of all int elements. 
     '''
     tot = 0
